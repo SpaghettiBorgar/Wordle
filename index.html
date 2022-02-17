@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content=""/>
+		<link rel="stylesheet" href="index.css"/>
+
+		<title>Wordle</title>
+
+		<script src="https://kit.fontawesome.com/8ddd990835.js" crossorigin="anonymous"></script>
+		<script src="jquery-3.6.0.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Wordle!</h1>
+		</div>
+		<div class="toast" id="alert">
+
+		</div>
+		<div class="field">
+			<table id="wordtable">
+				
+			</table>
+		</div>
+		<div class="keyboard">
+			<div class="key-row">
+				<div class="key">Q</div>
+				<div class="key">W</div>
+				<div class="key">E</div>
+				<div class="key">R</div>
+				<div class="key">T</div>
+				<div class="key">Y</div>
+				<div class="key">U</div>
+				<div class="key">I</div>
+				<div class="key">O</div>
+				<div class="key">P</div>
+			</div>
+			<div class="key-row">
+				<div class="key">A</div>
+				<div class="key">S</div>
+				<div class="key">D</div>
+				<div class="key">F</div>
+				<div class="key">G</div>
+				<div class="key">H</div>
+				<div class="key">J</div>
+				<div class="key">K</div>
+				<div class="key">L</div>
+			</div>
+			<div class="key-row">
+				<div class="key key-wide" id="backspace"><i class="fas fa-backspace"></i></div>
+				<div class="key">Z</div>
+				<div class="key">X</div>
+				<div class="key">C</div>
+				<div class="key">V</div>
+				<div class="key">B</div>
+				<div class="key">N</div>
+				<div class="key">M</div>
+				<div class="key key-wide" id="enter"><i class="fas fa-level-down-alt fa-rotate-90"></i></div>
+			</div>
+		</div>
+		<div class="overlay">
+			<div class="popup" id="startpopup">
+				<h2 class="popuptitle"></h2>
+				<div id="wordlength-select">
+					<span style="display: block">Word length</span>
+					<div class="button fas fa-angle-up" onclick="$('input[name=wordlength]')[0].stepUp()"></div>
+					<input type="number" value="5" min="1" max="16" name="wordlength"/>
+						<div class="button fas fa-angle-down" onclick="$('input[name=wordlength]')[0].stepDown()"></div>
+				</div>
+				<div id="language-select">
+					<select name="language">
+						<option value="english">English</option>
+					</select>
+				</div>
+				<div class="button" id="play">
+					Play!
+				</div>
+			</div>
+			<div class="popup hidden" id="scorepopup">
+				<h2 class="popuptitle"></h2>
+				<p id="results"></p>
+				<img class="spinning" id="potat" alt="spinning potato"/>
+				<div class="button" id="share">Copy results</div>
+			</div>
+		</div>
+	</body>
+</html>

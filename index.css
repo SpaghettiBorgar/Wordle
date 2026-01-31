@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .field table {
+	width: min-content;
 	padding: 16px;
 	border-spacing: 8px;
 	table-layout: fixed;

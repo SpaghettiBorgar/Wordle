@@ -33,7 +33,7 @@ function tableEntry(row, column) {
 }
 
 function input(letter) {
-	if(curLetter <= numLetters) {
+	if(curWord <= numWords && curLetter <= numLetters) {
 		tableEntry(curWord, curLetter).text(letter);
 		curLetter++;
 	}
@@ -55,11 +55,10 @@ function markLetter(row, col, state) {
 }
 
 async function enter() {
-	if(!running)
-			return;
+	if(!running || curWord > numWords)
+		return;
 	if(curLetter != numLetters + 1)
 		return toast("Not enough letters", 1000);
-	
 
 	let row = curWord;
 	let guess = $(`#wordtable tr:nth-child(${row})`).text().trim();
@@ -67,10 +66,8 @@ async function enter() {
 	if(!words.includes(guess.toLowerCase()))
 		return toast("Word not in dictionary", 1000);
 
-	if(row < numWords) {
-		curWord++;
-		curLetter = 1;
-	}
+	curWord++;
+	curLetter = 1;
 
 	let wordcp = word;
 	let marks = [];
@@ -105,7 +102,7 @@ async function enter() {
 	if($(`#wordtable tr:nth-child(${row})`).text().trim() == word)
 		return win(row);
 
-	if(row + 1 > numWords)
+	if(curWord > numWords)
 		return lose(row);
 }
 

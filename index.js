@@ -207,9 +207,18 @@ $("document").ready(function() {
 	});
 
 	$("#share").click(async function() {
-		navigator.clipboard.writeText($("#results").text());
-		$(this).text("Copied!");
+		try {
+			navigator.clipboard.writeText($("#results").text());
+			$(this).text("Copied!");
+			throw Exception();
+		} catch(err) {
+			$(this).addClass("button-red");
+			$(this).removeClass("button-green");
+			$(this).text("Failed!");
+		}
 		await sleep(2000);
+		$(this).addClass("button-green");
+		$(this).removeClass("button-red");
 		$(this).text("Copy results");
 	});
 

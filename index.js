@@ -236,7 +236,7 @@ $("document").ready(function() {
 			}
 		}
 
-		$(".key, #wordtable td").addClass("flippable blank");
+		$(".key, #wordtable td").addClass("flippable blank shadow");
 
 		running = true;
 	});

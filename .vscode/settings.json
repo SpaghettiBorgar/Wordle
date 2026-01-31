@@ -1,0 +1,15 @@
+{
+	"javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+	"javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+	"html.format.indentInnerHtml": true,
+	"html.format.extraLiners": "",
+	"css.format.newlineBetweenRules": false,
+	"css.format.newlineBetweenSelectors": false,
+	"css.format.preserveNewLines": true,
+	"less.format.newlineBetweenRules": false,
+	"less.format.newlineBetweenSelectors": false,
+	"less.format.preserveNewLines": true,
+	"scss.format.newlineBetweenRules": false,
+	"scss.format.newlineBetweenSelectors": false,
+	"scss.format.preserveNewLines": true
+}

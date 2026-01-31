@@ -224,7 +224,7 @@ $("document").ready(function() {
 			// word = words_[Math.floor(Math.random() * words_.length)].toUpperCase();
 			word = words_[Math.floor((new Date()) / 8.64e7) % words_.length].toUpperCase();
 		});
-		
+
 		fetch(`words/wordlist${numLetters}`).then(async data => {
 			words = await data.text();
 		});

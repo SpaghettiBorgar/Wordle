@@ -151,9 +151,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes flip {
-	0%		{ animation-timing-function: ease-in; transform: rotate3D(0,1,0,0deg); border-radius: 5%; }
-	50%		{ animation-timing-function: ease-out; transform: rotate3D(0,1,0,90deg); border-radius: 50%; }
-	100%	{ animation-timing-function: unset; transform: rotate3D(0,1,0,0deg); border-radius: 5%; }
+	0% {
+		animation-timing-function: ease-in;
+		transform: rotate3D(0, 1, 0, 0deg);
+		border-radius: 5%;
+	}
+	50% {
+		animation-timing-function: ease-out;
+		transform: rotate3D(0, 1, 0, 90deg);
+		border-radius: 50%;
+	}
+	100% {
+		animation-timing-function: unset;
+		transform: rotate3D(0, 1, 0, 0deg);
+		border-radius: 5%;
+	}
 }
 
 .hidden {
@@ -197,8 +209,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes spin {
-	from { transform: rotateZ(0deg); }
-	to   { transform: rotateZ(360deg); }
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(360deg);
+	}
 }
 
 .spinning {
@@ -290,7 +306,7 @@ input[type=number] {
 	display: inline-block;
 }
 
-#wordlength-select input[type=number]  {
+#wordlength-select input[type=number] {
 	font-size: 2em;
 	width: 1.5em;
 	text-align: center;
@@ -307,7 +323,7 @@ input[type=number] {
 	margin-bottom: 4px;
 }
 
-#startpopup > * {
+#startpopup>* {
 	margin-bottom: 1em;
 }
 

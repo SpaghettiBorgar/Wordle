@@ -210,8 +210,8 @@ $("document").ready(function() {
 		try {
 			navigator.clipboard.writeText($("#results").text());
 			$(this).text("Copied!");
-			throw Exception();
 		} catch(err) {
+			console.error(err);
 			$(this).addClass("button-red");
 			$(this).removeClass("button-green");
 			$(this).text("Failed!");
